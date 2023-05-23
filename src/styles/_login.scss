@@ -1,0 +1,94 @@
+.log-in-container.show{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    .log-in{
+        height: 60%;
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: aliceblue;
+        .log-left{
+            flex: 1;
+            background-image: url(../img/login.webp);
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            color: #cc9d67;
+            display: flex;
+            justify-content: center;
+            h2{
+                font-size: 2.5rem;
+                font-family: 'Cormorant', serif;
+                margin-top: 3rem;
+            }
+        }
+        .log-right{
+            position: relative;
+            flex: 1;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            h3{
+                margin-bottom: 2rem;
+            }
+            .input-log{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                input{
+                    font-size: 1rem;
+                    padding: 0.8rem;
+                    width: 100%;
+                    margin-bottom: 1rem;
+                    border: none;
+                    border: 1px solid rgb(63, 63, 63 , 0.5);
+                }
+                button{
+                    width: 100%;
+                    background: rgb(63, 63, 63 );
+                    font-family: "Lato", sans-serif;
+                    border: 1px solid rgb(63, 63, 63 , 0.5);
+                    padding: 1rem;
+                    color: white;
+                    cursor: pointer;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+.close-btn{
+    font-family: 'Jost', sans-serif;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    font-size: 1.5rem;
+    border: none;
+    padding: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.sign-btn{
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    font-family: "Lato", sans-serif;
+    cursor: pointer;
+}
+
+.log-in-container{
+    display: none;
+}

@@ -1,0 +1,139 @@
+#logo {
+  font-family: "Cormorant", serif;
+  margin-right: 4rem;
+  cursor: pointer;
+  border-top: 2.5px solid #00502c;
+  border-bottom: 4.5px solid #cc9d67;
+  padding: 0.5rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out;
+  text-align: center;
+  display: block;
+  &:hover {
+    letter-spacing: 5px;
+  }
+}
+.package-logo {
+  margin-right: -2rem;
+  a {
+    color: #372e1d;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+.fake-header {
+  min-height: 10vh;
+}
+.header {
+  background-color: #f1f1f1f1;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  .btn-main-left {
+    width: 200px;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    button {
+      color: #372e1d;
+      font-size: 1.3rem;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+  div {
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    .menu-btn {
+      min-width: 110px;
+      height: 10vh;
+      background-color: #372e1d;
+      color: white;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.user-btn,
+.bag-btn {
+  text-align: center;
+  color: #372e1d;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 45px;
+  max-width: 160px;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+}
+.user-btn,
+.bag-btn {
+  letter-spacing: 0;
+}
+
+.user-btn:hover,
+.user-btn:active,
+.bag-btn:hover,
+.bag-btn:active {
+  letter-spacing: 5px;
+}
+
+.user-btn::after,
+.user-btn::before,
+.bag-btn::after,
+.bag-btn::before {
+  backface-visibility: hidden;
+  border: 1px solid rgba(#fff, 0);
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+
+.user-btn:hover::after,
+.user-btn:hover::before,
+.bag-btn:hover::after,
+.bag-btn:hover::before {
+  backface-visibility: hidden;
+  border-color: #00502c;
+  transition: width 350ms ease-in-out;
+  width: 70%;
+}
+
+.user-btn:hover::before,
+.bag-btn:hover::before {
+  bottom: auto;
+  top: 0;
+  width: 70%;
+}
+
+.pro-btn-header {
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+
+  li {
+    list-style: none;
+    cursor: pointer;
+    a {
+      color: #2a2a2a;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+}

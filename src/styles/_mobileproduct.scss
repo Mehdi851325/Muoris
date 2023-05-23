@@ -1,0 +1,141 @@
+.mobile-products {
+  border: 1px solid #f1f1f1;
+  display: flex;
+  width: 23vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  flex: 0 0 33.33333%;
+  min-height: 82vh;
+  .product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    img {
+      width: auto;
+      height: 350px;
+    }
+  }
+  .title-product {
+    width: 100%;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+    font-family: "Jost", sans-serif;
+    .add-cart {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      button {
+        display: block;
+        width: 120px;
+        height: 30px;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 50px;
+        border: 3px solid #00502c;
+        color: #00502c;
+        font-size: 15px;
+        position: relative;
+        overflow: hidden;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.35s;
+        &::before,
+        ::after {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 100%;
+          top: -100%;
+          left: 0;
+          background: #00502c;
+          z-index: -1;
+          transition: all 0.35s;
+        }
+        &::before {
+          opacity: 0.5;
+        }
+        &::after {
+          transition-delay: 0.2s;
+        }
+        &:hover {
+          color: #fff;
+        }
+        &:hover::before,
+        &:hover::after {
+          top: 0;
+        }
+      }
+    }
+  }
+  .dec-product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+    .btn-color {
+      display: flex;
+      button {
+        width: 18px;
+        height: 18px;
+        margin-right: 0.5rem;
+        border-radius: 50%;
+        border: 2px solid white;
+        outline: 1px solid black;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.mobile-section-apple {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95vw;
+}
+.btn-mobile-sction {
+  min-height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .active-section{
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-bottom: 3px solid #372e1d;
+  }
+  button {
+    background: transparent;
+    padding: 1.5rem;
+    font-family: "Jost", sans-serif;
+    font-weight: bold;
+    margin-right: 2rem;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 2px solid #00502c;
+    cursor: pointer;
+    a {
+      color: #2a2a2a;
+      cursor: pointer;
+      text-decoration: none;
+      
+    }
+  }
+}
+.name-product {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Jost", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 100;
+  :last-child {
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+}

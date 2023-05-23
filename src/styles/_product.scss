@@ -1,0 +1,86 @@
+.product-detail{
+    min-height: 82vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5rem;
+    .name-product{
+        font-family: "Jost", sans-serif;
+        font-size: 4rem;
+        font-weight: bold;
+        color: rgb(79, 79, 79);
+    }
+    .price-product{
+        font-size: 2rem;
+        font-weight: bold;
+        color: rgb(28, 28, 28);
+        margin-top: 20px;
+
+    }
+    .memory-product{
+        font-weight: normal;
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+    img{
+        margin-right: 50px;
+        width: 500px;
+        height: 700px;
+    }
+}
+
+.btn-color-product{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    button{
+        display: flex;
+        width: 50px;
+        height: 50px;
+        margin-right: 1rem;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 1px solid rgb(153, 153, 153);
+        margin-top: 20px;
+        &:focus{
+            border: 5px solid white;
+            outline: 2px solid rgb(132, 131, 131);
+        }
+    }
+}
+.product-config{
+    
+    width: 30%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    justify-content: space-between;
+    
+}
+
+.btn-add-cart{
+    width: 100%;
+    min-height: 5vh;
+    font-size: 1.6rem;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    padding: 2rem;
+    background-color: black;
+    color: aliceblue;
+    cursor: pointer;
+    
+}
+.mini-img-product{
+    display: flex;
+    flex-direction: column;
+    img{
+        height: 200px;
+        width: 140px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+}
+.img-product{
+    display: flex;
+}
