@@ -40,7 +40,7 @@
   height: 10vh;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   position: fixed;
   width: 100%;
   z-index: 2;
@@ -57,6 +57,9 @@
     border: none;
     @include mobile{
       width: 100px;
+    }
+    @include tablet{
+      width: 120px;
     }
     button {
       color: #372e1d;
@@ -141,7 +144,7 @@
 }
 
 .pro-btn-header {
-  width: 35%;
+  width: 38%;
   display: flex;
   justify-content: space-between;
   @include mobile{
