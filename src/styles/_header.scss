@@ -12,6 +12,11 @@
   transition: all 0.25s ease-in-out;
   text-align: center;
   display: block;
+  @include mobile{
+    padding: 0.3rem;
+    border-bottom: 3.5px solid #cc9d67;
+    border-top: 1.5px solid #00502c;
+  }
   &:hover {
     letter-spacing: 5px;
   }

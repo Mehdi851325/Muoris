@@ -28,7 +28,9 @@
 .popular-container{
     display: flex;
     div:last-child{
-      display: none;
+      @include mobile{
+        display: none;
+      }
     }
 }
 .popular-main{
