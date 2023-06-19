@@ -1,3 +1,5 @@
+@use './break' as *;
+
 #logo {
   font-family: "Cormorant", serif;
   margin-right: 4rem;
@@ -24,22 +26,33 @@
 }
 .fake-header {
   min-height: 10vh;
+  @include mobile{
+    display: none;
+  }
 }
 .header {
   background-color: #f1f1f1f1;
-  min-height: 10vh;
+  height: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: fixed;
   width: 100%;
   z-index: 2;
+  @include mobile{
+    height: 5vh;
+    width: 100%;
+    justify-content: space-between;
+  }
   .btn-main-left {
     width: 200px;
     justify-content: space-between;
     padding: 0.5rem 1rem;
     font-size: 1rem;
     border: none;
+    @include mobile{
+      width: 100px;
+    }
     button {
       color: #372e1d;
       font-size: 1.3rem;
@@ -126,7 +139,9 @@
   width: 35%;
   display: flex;
   justify-content: space-between;
-
+  @include mobile{
+    display: none;
+  }
   li {
     list-style: none;
     cursor: pointer;

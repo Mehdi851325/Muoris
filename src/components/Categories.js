@@ -12,7 +12,9 @@ const Categories = () => {
         <div className="categories">
             <h2>CATEGORIES</h2>
             <div className="mobile-cate cate">
-                <img src={apple}></img>
+                <div className="img-cate">
+                <img src={apple} alt="iphone"></img>
+                </div>
                 <div className="dec-cate">
                 <h3>Mobile</h3>
                 <p>To access and use all the features of Apple Card, you must add Apple Card to Wallet on an iPhone or iPad with the latest version of iOS or iPadOS. </p>
@@ -21,18 +23,22 @@ const Categories = () => {
             </div>
             <div className="watch-cate cate">
                 <div className="dec-cate">
-                <h3>Smart watch</h3>
-                <p>To access and use all the features of Apple Card, you must add Apple Card to Wallet on an iPhone or iPad with the latest version of iOS or iPadOS. </p>
-                <button>VIEW CATEGORIES <button><FontAwesomeIcon icon={faArrowRight} /></button></button>
+                    <h3>Smart watch</h3>
+                    <p>To access and use all the features of Apple Card, you must add Apple Card to Wallet on an iPhone or iPad with the latest version of iOS or iPadOS. </p>
+                    <button>VIEW CATEGORIES <button><FontAwesomeIcon icon={faArrowRight} /></button></button>
                 </div>
-                <img src={watch}></img>
+                <div className="img-cate">
+                <img src={watch} alt="watch"></img>
+                </div>
             </div>
             <div className="headphone-cate cate">
-                <img src={beats}></img>
+                <div className="img-cate">  
+                <img src={beats} alt="headphone"></img>
+                </div>
                 <div className="dec-cate">
-                <h3>Headphone</h3>
-                <p>To access and use all the features of Apple Card, you must add Apple Card to Wallet on an iPhone or iPad with the latest version of iOS or iPadOS.</p>
-                <button>VIEW CATEGORIES<button><FontAwesomeIcon icon={faArrowRight} /></button></button>
+                    <h3>Headphone</h3>
+                    <p>To access and use all the features of Apple Card, you must add Apple Card to Wallet on an iPhone or iPad with the latest version of iOS or iPadOS.</p>
+                    <button>VIEW CATEGORIES<button><FontAwesomeIcon icon={faArrowRight} /></button></button>
                 </div>
             </div>
         </div>

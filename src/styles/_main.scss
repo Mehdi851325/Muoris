@@ -1,22 +1,32 @@
+@use './index' as *;
 .main{
     display: flex;
     min-height: 55vh;
+    width: 100%;
     .black-block{
         width: 35vw;
         background-color: #372e1d;
-        
+        @include mobile{
+         width: 30vw;
+         }
          }
          .line-main-top{
             background-color: #00502c;
             height: 0.2rem;
             width: 65vw;
             z-index: -1;
+            @include mobile{
+               width: 70vw;
+            }
          }
          .line-main-bot{
             background-color: #cc9d67;
             height: 0.5rem;
             width: 65vw;
             z-index: -1;
+            @include mobile{
+               width: 70vw;
+            }
          }
          .logo-main{
             font-family: 'Cormorant', serif;
@@ -24,6 +34,9 @@
             font-weight: 600;
             color: #372e1d;
             margin: 3rem 0rem;
+            @include mobile{
+               margin-left: 2.7rem;
+            }
          }
          .pack-main{
             display: flex;

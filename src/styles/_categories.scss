@@ -1,3 +1,5 @@
+@use './index' as *;
+
 .categories{
     display: flex;
     flex-direction: column;
@@ -5,32 +7,59 @@
         text-align: center;
         color: #2a2a2a;
         font-size: 2.5rem;
+        margin-bottom: 5px;
     }
     .cate{
+        min-height: 50vh;
         display: flex;
         align-items: center;
         justify-content: space-around;
+        .img-cate{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+        }
         img{
-            width: 500px;
+            width: auto;
             height: 600px;
             object-fit: cover;
-            flex-basis: 300px;
             &:first-child{
-                width: 450px;
+                width: 350px;
+                height: 470px;
+                @include tablet{
+                    width: auto;
+                    height: 370px;
+                }
+                @include mobile{
+                    width: auto;
+                    height: 260px;
+                }
             }
         }
         .dec-cate{
-            width: 500px;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             h3{
                 color: #2a2a2a;
                 font-size: 2rem;
                 margin-bottom: 1.5rem;
-
+                @include mobile{
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                }
             }
             p{
+                text-align: start;
                 line-height: 2rem;
                 margin-bottom: 2rem;
                 color: #3b3b3b;
+                width: 50%;
+                @include mobile{
+                    width: 80%;
+                    margin-bottom: 1rem;
+                }
             }
             button{
                 display: flex;
@@ -41,6 +70,10 @@
                 font-family: "Lato", sans-serif;
                 font-weight: bold;
                 width: 300px;
+                @include mobile{
+                    width: 150px;
+                    margin-bottom: 1rem;
+                }
                 button{
                     border: none;
                     padding: 0;
@@ -54,5 +87,20 @@
                 }
             }
         }
+    }
+}
+.watch-cate{
+    @include mobile{
+        flex-direction: column-reverse;
+    }
+}
+.mobile-cate{
+    @include mobile{
+        flex-direction: column;
+    }
+}
+.headphone-cate{
+    @include mobile{
+        flex-direction: column;
     }
 }

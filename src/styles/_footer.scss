@@ -1,4 +1,6 @@
+@use './index' as *;
 .footer{
+    max-width: 100%;
     min-height: 60vh;
     display: flex;
     flex-direction: column;
@@ -9,6 +11,9 @@
         display: flex;
         align-items: start;
         justify-content: space-around;
+        @include mobile{
+            flex-wrap: wrap;
+        }
     }
     .logo{
         font-family: "Cormorant", serif;
@@ -64,12 +69,16 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            @include mobile{
+                margin-top: 2rem;
+            }
             img{
-                width: 80px;
-                height: 80px;
+                width: 70px;
+                height: 70px;
                 cursor: pointer;
-                svg{
-                    color: rgb(218, 224, 229);
+                @include mobile{
+                    width: 50px;
+                    height: 50px;
                 }
             }
         }

@@ -1,7 +1,7 @@
 
-import instagram from '../img/icon/instagram.svg'
-import telegram from '../img/icon/telegram.svg'
-import whatsapp from '../img/icon/whatsapp.svg'
+import instagram from '../img/icon/instagram.svg';
+import telegram from '../img/icon/telegram.svg';
+import whatsapp from '../img/icon/whatsapp.svg';
 import { Link } from "react-router-dom";
 
 const Footer = () => {

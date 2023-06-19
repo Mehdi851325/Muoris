@@ -2,11 +2,16 @@ import React from "react";
 import SecondMain from "./SecondMain";
 import Categories from "./Categories";
 import {motion} from 'framer-motion';
-
+import { MobileState } from "../mobileState";
+import PopularPro from "./PopularPro";
+import PopularXiaomi from "./PopularXiaomi";
 
 
 
  const Main = () => {
+    const popularProduct = MobileState()[0].appleBrand.splice(5);
+    const xiaomiData = MobileState()[2].xiaomiBeand.splice(5);
+    console.log(xiaomiData);
     return ( 
         <div>
         <div className="main">
@@ -34,6 +39,42 @@ import {motion} from 'framer-motion';
             </div>
         </div>
         <SecondMain />
+        <div className="popular-main">
+            <h2>Apple Smart Phone</h2>
+            <div className="popular-container">
+                {popularProduct.map(item =>(
+                    <PopularPro 
+                    poster={item.Img}
+                    title={item.name}
+                    memory={item.memory}
+                    price={item.price}
+                    key={item.id}
+                    url={item.url}
+                    />
+                ))}
+            </div>
+            <div className="container-btn-see">
+            <button className="see-more-btn">see more</button>
+            </div>
+        </div>
+        <div className="popular-main">
+            <h2>Xiaomi Smart Phone</h2>
+            <div className="popular-container">
+                {xiaomiData.map(item =>(
+                    <PopularXiaomi 
+                    poster={item.Img}
+                    title={item.name}
+                    memory={item.memory}
+                    price={item.price}
+                    key={item.id}
+                    url={item.url}
+                    />
+                ))}
+            </div>
+            <div className="container-btn-see">
+            <button className="see-more-btn">see more</button>
+            </div>
+        </div>
         <Categories />
         </div>
      );
