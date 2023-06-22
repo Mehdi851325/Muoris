@@ -2,11 +2,11 @@
 
 #logo {
   font-family: "Cormorant", serif;
-  margin-right: 4rem;
+  margin: 10px 50px 10px 0px;
   cursor: pointer;
   border-top: 2.5px solid #00502c;
   border-bottom: 4.5px solid #cc9d67;
-  padding: 0.5rem;
+  padding: 4px;
   letter-spacing: 2px;
   text-decoration: none;
   transition: all 0.25s ease-in-out;
@@ -29,15 +29,8 @@
     text-decoration: none;
   }
 }
-.fake-header {
-  min-height: 10vh;
-  @include mobile{
-    display: none;
-  }
-}
 .header {
   background-color: #f1f1f1f1;
-  height: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -45,15 +38,13 @@
   width: 100%;
   z-index: 2;
   @include mobile{
-    height: 5vh;
     width: 100%;
     justify-content: space-between;
   }
   .btn-main-left {
-    width: 200px;
+    width: 300px;
     justify-content: space-between;
     padding: 0.5rem 1rem;
-    font-size: 1rem;
     border: none;
     @include mobile{
       width: 100px;
@@ -61,16 +52,41 @@
     @include tablet{
       width: 120px;
     }
-    button {
-      color: #372e1d;
-      font-size: 1.3rem;
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
+  }
+  .ham-btn{
+    display: none;
+    margin-left: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    width: 50px;
+    @include mobile{
+      display: flex;
+      height: 34px;
+      width: 30px;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .ham-line-1{
+      width: 15px;
+      height: 2px;
+      background-color: #2a2a2a;
+      margin-bottom: 2px;
+    }
+    .ham-line-2{
+      width: 15px;
+      height: 2px;
+      background-color: #2a2a2a;
+      margin-bottom: 2px;
+    }
+    .ham-line-3{
+      width: 15px;
+      height: 2px;
+      background-color: #2a2a2a;
     }
   }
   div {
-    min-height: 10vh;
     display: flex;
     align-items: center;
     .menu-btn {
@@ -87,28 +103,37 @@
 
 .user-btn,
 .bag-btn {
+  background-color: transparent;
+  border: none;
   text-align: center;
   color: #372e1d;
+  padding: 0px 25px;
   cursor: pointer;
   display: block;
-  font-size: 16px;
+  font-size: 25px;
   font-weight: 400;
-  line-height: 45px;
+  line-height: 30px;
   max-width: 160px;
   position: relative;
   text-decoration: none;
   width: 100%;
-}
-.user-btn,
-.bag-btn {
   letter-spacing: 0;
+  @include tablet{
+    font-size: 20px;
+  }
+  @include mobile{
+    font-size: 15px;
+    padding: 0px;
+  }
 }
+
 
 .user-btn:hover,
 .user-btn:active,
 .bag-btn:hover,
 .bag-btn:active {
   letter-spacing: 5px;
+  background-color: transparent;
 }
 
 .user-btn::after,

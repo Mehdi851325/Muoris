@@ -1,7 +1,6 @@
 @use './index' as *;
 .footer{
     max-width: 100%;
-    min-height: 60vh;
     display: flex;
     flex-direction: column;
     margin-top: 25px;
@@ -73,12 +72,12 @@
                 margin-top: 2rem;
             }
             img{
-                width: 70px;
-                height: 70px;
+                width: 50px;
+                height: 50px;
                 cursor: pointer;
                 @include mobile{
-                    width: 50px;
-                    height: 50px;
+                    width: 30px;
+                    height: 30px;
                 }
             }
         }
@@ -89,15 +88,18 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    min-height: 20vh;
     .footer-line-left{
         height: 5px;
         width: 30rem;
         background-color: #00502c;
+        margin-bottom: 30px;
+        margin-top: 30px;
     }
     .footer-line-right{
         height: 5px;
         width: 30rem;
         background-color: #cc9d67;
+        margin-bottom: 30px;
+        margin-top: 30px;
     }
 }

@@ -1,13 +1,14 @@
 @use './index' as *;
 .main{
     display: flex;
-    min-height: 55vh;
+    min-height: 65vh;
     width: 100%;
     .black-block{
         width: 35vw;
+        min-height: 65vh;
         background-color: #372e1d;
         @include mobile{
-         width: 30vw;
+         width: 35vw;
          }
          }
          .line-main-top{
@@ -16,7 +17,7 @@
             width: 65vw;
             z-index: -1;
             @include mobile{
-               width: 70vw;
+               width: 65vw;
             }
          }
          .line-main-bot{
@@ -25,7 +26,7 @@
             width: 65vw;
             z-index: -1;
             @include mobile{
-               width: 70vw;
+               width: 65vw;
             }
          }
          .logo-main{
@@ -56,3 +57,24 @@
 
 
 
+.pop-nav-mobile{
+   margin-top: 50px;
+   position: fixed;
+   display: flex;
+   background-color: #f1f1f1f1;
+   opacity: 1;
+   border-radius: 10px;
+   width: 20vw;
+   margin-left: 10px;
+   z-index: 99;
+   ul{
+      margin-left: 10px;
+      li{
+         font-size: 1rem;
+         list-style: none;
+         margin-bottom: 5px;
+         margin-top: 5px;
+         cursor: pointer;
+      }
+   }
+}

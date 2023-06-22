@@ -6,9 +6,19 @@ import { MobileState } from "../mobileState";
 import PopularPro from "./PopularPro";
 import PopularXiaomi from "./PopularXiaomi";
 
+const show = {
+    opacity: 1,
+    display: "block"
+  };
+  
+  const hide = {
+    opacity: 0,
+    transitionEnd: {
+      display: "none"
+    }
+  };
 
-
- const Main = () => {
+ const Main = ({isOpenNav}) => {
     const popularProduct = MobileState()[0].appleBrand.splice(5);
     const xiaomiData = MobileState()[2].xiaomiBeand.splice(5);
     console.log(xiaomiData);
@@ -18,7 +28,15 @@ import PopularXiaomi from "./PopularXiaomi";
             <motion.div 
             animate={{ x:0 , transition:{duration:1.25} }} 
             initial={{ x:-750 }} 
-            className="black-block">
+            className="black-block" >
+                <motion.div className="pop-nav-mobile" animate={isOpenNav ? show : hide}>
+                    <ul>
+                        <li>Mobile</li>
+                        <li>Headphone</li>
+                        <li>Smart watch</li>
+                        <li>Accessories</li>
+                    </ul>
+                </motion.div>
             </motion.div>
             <div className="pack-main">
                 <motion.div 
@@ -29,7 +47,7 @@ import PopularXiaomi from "./PopularXiaomi";
                 <motion.h1 
                 className="logo-main"
                 initial={{ x:-59,opacity: 0}}
-                animate={{ x:-60,opacity:1 , transition:{duration:2.5, ease:'easeOut'}}}
+                animate={{ x:-60,opacity:1 , transition:{duration:2, ease:'easeOut'}}}
                 ><span>M</span>OURIS</motion.h1>
                 <motion.div 
                 className="line-main-bot"

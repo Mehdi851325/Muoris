@@ -2,19 +2,11 @@
 .second-main{
     display: flex;
     flex-direction: column;
-    min-height: 35vh;
-    @include mobile{
-        min-height: 25vh;
-     }
     .dec-second-main{
         display: flex;
         flex-direction: column;
         text-align: center;
         align-items: center;
-        min-height: 10vh;
-        @include mobile{
-            min-height: 5vh;
-         }
         .line-second{
             height: 3px;
             background-color: #00502c;
@@ -39,12 +31,8 @@
     .icon-second-main{
         width: 100%;
         display: flex;
-        min-height: 25vh;
         align-items: center;
         justify-content: space-around;
-        @include mobile{
-            min-height: 10vh;
-        }
         img{
             width: auto;
             height: 160px;

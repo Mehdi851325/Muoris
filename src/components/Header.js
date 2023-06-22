@@ -4,13 +4,19 @@ import { faUser, faBagShopping} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 
-const Header = ({setIsLogOpen}) => {
+
+const Header = ({setIsLogOpen,setIsOpenNav,isOpenNav}) => {
 
 
   return (
     <>
       <div className="header">
         <div className="btn-main-left">
+          <button onClick={()=>setIsOpenNav(!isOpenNav)} className="ham-btn">
+            <div className="ham-line-1"></div>
+            <div className="ham-line-2"></div>
+            <div className="ham-line-3"></div>
+          </button>
           <button className="bag-btn">
             <FontAwesomeIcon icon={faBagShopping} />
           </button>
@@ -34,7 +40,8 @@ const Header = ({setIsLogOpen}) => {
           </div>
         </div>
       </div>
-      <div className="fake-header"></div>
+      <div className="fake-header">
+      </div>
     </>
   );
 };

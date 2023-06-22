@@ -1,10 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
+const show = {
+    opacity: 1,
+    display: "flex"
+  };
+  
+  const hide = {
+    opacity: 0,
+    transitionEnd: {
+      display: "none"
+    }
+  };
 
 const LogIn = ({isLogOpen,setIsLogOpen}) => {
 
     return ( 
-        <div className={`log-in-container + ${isLogOpen ? "show" : ""}`}>
+        <motion.div className='log-in-container' animate={isLogOpen? show: hide}>
             <div className="log-in">
                 <div className="log-left">
                     <h2>MOURIS</h2>
@@ -28,7 +41,7 @@ const LogIn = ({isLogOpen,setIsLogOpen}) => {
           }} className="close-btn">X</button>
                 </div>
             </div>
-        </div>
+        </motion.div>
      );
 }
  

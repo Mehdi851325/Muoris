@@ -1,10 +1,10 @@
 import React from "react";
 import Main from "../components/Main";
 
-const Landing = () => {
+const Landing = ({isOpenNav}) => {
     return ( 
         <>
-         <Main />
+         <Main isOpenNav={isOpenNav}/>
         </>
      );
 }

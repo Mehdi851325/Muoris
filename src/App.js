@@ -16,11 +16,16 @@ import Footer from './components/Footer';
 
 function App() {
   const [isLogOpen, setIsLogOpen] = useState(false);
+  const [isOpenNav, setIsOpenNav] = useState(false);
   return (
       <div className="App">
-          <Header  setIsLogOpen={setIsLogOpen}/>
+          <Header  
+            setIsLogOpen={setIsLogOpen} 
+            setIsOpenNav={setIsOpenNav}
+            isOpenNav={isOpenNav}
+            />
           <Routes>
-            <Route path="/" element={<Landing />} index/>
+            <Route path="/" element={<Landing isOpenNav={isOpenNav}/>} index/>
             <Route path="/mobile/apple" element={<Mobile />} />
             <Route path='/mobile/samsung' element={<SamsungProduct />}/>
             <Route path='/mobile/apple/:id' element={<Products />} />
