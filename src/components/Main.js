@@ -5,6 +5,7 @@ import {motion} from 'framer-motion';
 import { MobileState } from "../mobileState";
 import PopularPro from "./PopularPro";
 import PopularXiaomi from "./PopularXiaomi";
+import { Link } from "react-router-dom";
 
 const show = {
     opacity: 1,
@@ -31,10 +32,10 @@ const show = {
             className="black-block" >
                 <motion.div className="pop-nav-mobile" animate={isOpenNav ? show : hide}>
                     <ul>
-                        <li>Mobile</li>
-                        <li>Headphone</li>
-                        <li>Smart watch</li>
-                        <li>Accessories</li>
+                    <li><Link to='/mobile/apple'>Mobile</Link></li>
+                    <li><Link to='/headphone'>Headphone</Link></li>
+                    <li><Link to='/smartwatch'>Smart watch</Link></li>
+                    <li><Link to='/charger'>Accessories</Link></li>
                     </ul>
                 </motion.div>
             </motion.div>
