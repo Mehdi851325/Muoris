@@ -32,7 +32,9 @@ const SamsungProduct = () => {
             <div className="mobile-products">
                 <Link to={`${samProduct.url}`}>
                     <div className="product">
-                    <img src={samProduct.Img} alt='phone'/>
+                    <div className="img-product">
+                        <img src={samProduct.Img} alt='phone'/>
+                    </div>
                     <div className="title-product">
                         <div className="name-product">
                             <h3>{samProduct.name}</h3>

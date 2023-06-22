@@ -8,11 +8,20 @@
   align-items: center;
   padding-top: 1rem;
   flex: 0 0 33.33333%;
+  @include mobile{
+    min-width: 100%;
+    flex-wrap: wrap;
+    align-items: start;
+  }
   .product {
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    @include mobile{
+      display: flex;
+      flex-direction: row;
+    }
     img {
       width: auto;
       height: 360px;
@@ -20,12 +29,20 @@
         height: 230px;
       }
       @include mobile{
-        height: 110px;
+        height: 120px;
       }
     }
     
   }
+  .img-product{
+    @include mobile{
+      display: flex;
+      flex: 1;
+      margin: 10px 30px;
+    }
+  }
   .title-product {
+    flex: 2;
     width: 100%;
     margin-top: 0.5rem;
     display: flex;
@@ -33,6 +50,9 @@
     flex-direction: column;
     justify-content: space-between;
     font-family: "Jost", sans-serif;
+    @include mobile{
+      width: 80%;
+    }
     .add-cart {
       display: flex;
       justify-content: center;
@@ -93,10 +113,16 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 0.5rem;
+    @include mobile{
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      margin-bottom: 5px;
+    }
     .btn-color {
       display: flex;
       @include mobile{
-        display: none;
+        margin-top: 5px;
       }
       button {
         width: 18px;
@@ -117,7 +143,6 @@
   width: 95vw;
 }
 .btn-mobile-sction {
-  min-height: 8vh;
   display: flex;
   align-items: center;
   justify-content: center;

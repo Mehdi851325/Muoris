@@ -34,7 +34,9 @@ const MobileProduct = ({
     <div className="mobile-products">
       <Link to={`${url}`}>
         <div className="product">
-          <img src={image} alt="phone" />
+          <div className="img-product">
+            <img src={image} alt="phone" />
+          </div>
           <div className="title-product">
             <div className="name-product">
               <h3>{name}</h3>
