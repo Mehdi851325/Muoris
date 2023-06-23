@@ -1,9 +1,15 @@
+@use './index' as *;
 .product-detail{
     min-height: 82vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 2.5rem;
+    @include tablet{
+        display: flex;
+        flex-direction: column;
+    }
     .name-product{
         font-family: "Jost", sans-serif;
         font-size: 4rem;
@@ -24,8 +30,15 @@
     }
     img{
         margin-right: 50px;
-        width: 500px;
+        width: auto;
         height: 700px;
+        @include tablet{
+            height: 500px;
+        }
+        @include mobile{
+            height: 300px;
+            margin-right: 0px;
+        }
     }
 }
 
@@ -33,6 +46,9 @@
     width: 100%;
     display: flex;
     align-items: center;
+    @include tablet{
+        margin-bottom: 20px;
+    }
     button{
         display: flex;
         width: 50px;
@@ -46,17 +62,29 @@
             border: 5px solid white;
             outline: 2px solid rgb(132, 131, 131);
         }
+        @include mobile{
+            width: 35px;
+            height: 35px;
+        }
     }
 }
-.product-config{
+.name-price-con{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
     
+}
+.product-config{
     width: 30%;
     height: 70vh;
     display: flex;
     flex-direction: column;
     margin-left: 50px;
-    justify-content: space-between;
-    
+    justify-content: center;
+    @include tablet{
+        width: 100%;
+        height: fit-content;
+    }
 }
 
 .btn-add-cart{
@@ -69,16 +97,29 @@
     background-color: black;
     color: aliceblue;
     cursor: pointer;
+    @include mobile{
+        width: 50%;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     
 }
 .mini-img-product{
     display: flex;
     flex-direction: column;
+    @include mobile{
+        display: none;
+    }
     img{
         height: 200px;
-        width: 140px;
+        width: auto;
         margin-top: 20px;
         cursor: pointer;
+        @include tablet{
+            height: 150px;
+        }
     }
 }
 .img-product{

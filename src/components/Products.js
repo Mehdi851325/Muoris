@@ -24,7 +24,7 @@ const Products = () => {
         <img src={filterUrl[0].Img}/>
       </div>
       <div className="product-config">
-        <div>
+        <div className="name-price-con">
           <h2 className="name-product">Apple {filterUrl[0].name}</h2>
           <h2 className="price-product">{filterUrl[0].price}</h2>
         </div>
